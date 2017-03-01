@@ -1,27 +1,26 @@
 #Config new Raspberry PI
 
-#### create raspbian-lite image on SD card
+### create raspbian-lite image on SD card
 
 https://www.raspberrypi.org/downloads/raspbian/
 
 https://www.raspberrypi.org/documentation/installation/installing-images/README.md
 
-#### allow ssh
+### allow ssh
 
 add `/boot/ssh` file to root of SD card
 
-#### create wpa_sumplicatn
+### create wpa_sumplicatn
 
 add `/boot/wpa_supplicant.conf` to root of SD card
 
-#### boot and ssh into pi
+### boot and ssh into pi
 
 `$ ssh pi@<pi ip address>`
 
 default password is `raspberry`
 
-
-#### update image
+### update image
 
 ```
 $ sudo passwd //create new password
@@ -32,7 +31,7 @@ $ sudo apt-get install git
 $ sudo apt-get install htop //to quickly check the memory and cpu usage
 ```
 
-#### install node and global node tools
+### install node and global node tools
 
 ```
 $ wget http://node-arm.herokuapp.com/node_latest_armhf.deb && sudo dpkg -i node_latest_armhf.deb
@@ -41,7 +40,7 @@ $ sudo npm install forever -g
 $ sudo npm install forever-service -g
 ```
 
-#### install rmate (enable editing on host ide)
+### install rmate (enable editing on host ide)
 
 ```
 sudo curl -o /usr/local/bin/rmate https://raw.githubusercontent.com/aurora/rmate/master/rmate
@@ -53,7 +52,8 @@ to use just ssh with port forwarding
 ssh -R 52698:localhost:52698 pi@<pi ip address>
 ```
 
-#### set .vimrc
+### set .vimrc
+
 ```
 syntax on
 set number
@@ -67,7 +67,7 @@ set lazyredraw
 set showmatch
 ```
 
-#### running node service in production
+### running node service in production
 
 this is create an OS level service that will run automatically on system boot. This is important to handle power outages, etc.
 
@@ -76,7 +76,7 @@ $ sudo forever-service install <new service name> --script index.js
 $ sudo service <service name> start
 ```
 
-#### stopping service
+### stopping service
 
 disable for development
 ```
