@@ -1,17 +1,18 @@
 #Config new Raspberry PI
 
-#### create raspbian-lite image
+#### create raspbian-lite image on SD card
 
 https://www.raspberrypi.org/downloads/raspbian/
+
 https://www.raspberrypi.org/documentation/installation/installing-images/README.md
 
 #### allow ssh
 
-add `/boot/ssh` file to root
+add `/boot/ssh` file to root of SD card
 
 #### create wpa_sumplicatn
 
-add `/boot/wpa_supplicant.conf` to root
+add `/boot/wpa_supplicant.conf` to root of SD card
 
 #### boot and ssh into pi
 
