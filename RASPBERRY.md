@@ -14,6 +14,15 @@ add `/boot/ssh` file to root of SD card
 
 add `/boot/wpa_supplicant.conf` to root of SD card
 
+edit file
+```
+network={
+  ssid="YOUR_SSID"
+  psk="YOUR_PASSWORD"
+  key_mgmt=WPA-PSK
+}
+```
+
 ### boot and ssh into pi
 
 `$ ssh pi@<pi ip address>`
@@ -43,13 +52,13 @@ $ sudo npm install forever-service -g
 ### install rmate (enable editing on host ide)
 
 ```
-sudo curl -o /usr/local/bin/rmate https://raw.githubusercontent.com/aurora/rmate/master/rmate
-sudo chmod +x /usr/local/bin/rmate
+$ sudo curl -o /usr/local/bin/rmate https://raw.githubusercontent.com/aurora/rmate/master/rmate
+$ sudo chmod +x /usr/local/bin/rmate
 ```
 
 to use just ssh with port forwarding
 ```
-ssh -R 52698:localhost:52698 pi@<pi ip address>
+$ ssh -R 52698:localhost:52698 pi@<pi ip address>
 ```
 
 ### set .vimrc
@@ -82,6 +91,7 @@ disable for development
 ```
 $ sudo service <service name> stop
 ```
+
 or more permanent (to prevent it starting on reboot)
 ```
 $ sudo forever-service delete <service name>
