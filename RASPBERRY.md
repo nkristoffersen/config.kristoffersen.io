@@ -35,6 +35,7 @@ default password is `raspberry`
 $ sudo passwd //create new password
 $ sudo apt-get update
 $ sudo apt-get upgrade
+$ sudo apt-get install screen
 $ sudo apt-get install vim //for quick edits
 $ sudo apt-get install git
 $ sudo apt-get install htop //to quickly check the memory and cpu usage
