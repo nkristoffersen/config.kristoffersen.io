@@ -97,3 +97,10 @@ or more permanent (to prevent it starting on reboot)
 ```
 $ sudo forever-service delete <service name>
 ```
+
+### other useful terminal commands
+```
+$ df -h // get disk usage in human readable format
+$ ab -n 200 -c 200 http://barleyboard.com/ // -n is total number of requests to perform and -c is number of requests to make at once
+$ screen // hit [ctr]+[a] then [ctr]+[c] to create a new screen. then hit [ctrl]+[a] twice to switch between screens.
+```
