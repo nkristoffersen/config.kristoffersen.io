@@ -77,6 +77,12 @@ set lazyredraw
 set showmatch
 ```
 
+### set .inputrc
+create `~/.inputrc` and add the following line
+```
+set editing-mode vi
+```
+
 ### running node service in production
 
 this is create an OS level service that will run automatically on system boot. This is important to handle power outages, etc.
@@ -102,5 +108,5 @@ $ sudo forever-service delete <service name>
 ```
 $ df -h // get disk usage in human readable format
 $ ab -n 200 -c 200 http://barleyboard.com/ // -n is total number of requests to perform and -c is number of requests to make at once
-$ screen // hit [ctr]+[a] then [ctr]+[c] to create a new screen. then hit [ctrl]+[a] twice to switch between screens.
+$ screen // hit [ctr]+[a] then [c] to create a new screen. then hit [ctrl]+[a] twice to switch between screens.
 ```
