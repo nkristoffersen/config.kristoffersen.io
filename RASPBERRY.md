@@ -10,7 +10,7 @@ https://www.raspberrypi.org/documentation/installation/installing-images/README.
 
 add `/boot/ssh` file to root of SD card
 
-### create wpa_sumplicatn
+### create wpa_supplicant
 
 add `/boot/wpa_supplicant.conf` to root of SD card
 
@@ -41,6 +41,26 @@ $ sudo apt-get install git
 $ sudo apt-get install htop //to quickly check the memory and cpu usage
 ```
 
+### enable desktop
+
+```
+$ sudo apt-get install raspberrypi-ui-mods
+$ sudo systemctl start lightdm
+$ sudo apt-get install chromium-browser
+```
+
+### install pathogen
+```
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+```
+
+### install pathogen plugins
+```
+cd ~/.vim/bundle && \
+git clone --depth=1 https://github.com/vim-syntastic/syntastic.git
+```
+
 ### install node and global node tools
 
 ```
@@ -65,6 +85,7 @@ $ ssh -R 52698:localhost:52698 pi@<pi ip address>
 ### set .vimrc
 
 ```
+execute pathogen#infect()
 syntax on
 set number
 set tabstop=4
