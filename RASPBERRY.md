@@ -72,6 +72,11 @@ $ sudo npm install forever-service -g
 
 ### install rmate (enable editing on host ide)
 
+enable on host code editor
+- visual studio code: https://github.com/rafaelmaiolla/remote-vscode
+- atom: https://atom.io/packages/remote-atom
+
+install rmate on pi
 ```
 $ sudo curl -o /usr/local/bin/rmate https://raw.githubusercontent.com/aurora/rmate/master/rmate
 $ sudo chmod +x /usr/local/bin/rmate
