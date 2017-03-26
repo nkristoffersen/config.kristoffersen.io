@@ -87,6 +87,13 @@ to use just ssh with port forwarding
 $ ssh -R 52698:localhost:52698 pi@<pi ip address>
 ```
 
+### install atom colors for vim
+
+```
+$ cd .vim/colors
+$ wget https://raw.githubusercontent.com/joshdick/onedark.vim/master/colors/onedark.vim
+```
+
 ### set .vimrc
 
 ```
@@ -101,6 +108,7 @@ set cursorline
 set wildmenu
 set lazyredraw
 set showmatch
+colorscheme onedark
 ```
 
 ### set .inputrc
