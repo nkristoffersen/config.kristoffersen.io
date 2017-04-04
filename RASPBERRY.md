@@ -38,6 +38,7 @@ $ sudo apt-get upgrade
 $ sudo apt-get install screen
 $ sudo apt-get install vim //for quick edits
 $ sudo apt-get install git
+$ sudo apt-get install dnsutils
 $ sudo apt-get install htop //to quickly check the memory and cpu usage
 ```
 
@@ -97,17 +98,33 @@ $ wget https://raw.githubusercontent.com/joshdick/onedark.vim/master/colors/oned
 ### set .vimrc
 
 ```
+"vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'severin-lemaignan/vim-minimap'
+Plugin 'Yggdroot/indentLine'
+call vundle#end()
+filetype plugin indent on
+
+"other
 execute pathogen#infect()
 syntax on
 set number
 set tabstop=4
+set list lcs=tab:\|\
+autocmd VimEnter * Minimap
 set softtabstop=4
 set expandtab
-set showcmd
+"set showcmd
 set cursorline
-set wildmenu
+"set wildmenu
 set lazyredraw
 set showmatch
+set laststatus=2
+set noshowmode
 colorscheme onedark
 ```
 
