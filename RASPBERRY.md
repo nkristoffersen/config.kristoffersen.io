@@ -23,6 +23,10 @@ network={
 }
 ```
 
+### allow for connecting things to the network port at the same time as wifi
+(should rewrite this tutorial to work specifically for my usecase)
+https://www.raspberrypi.org/forums/viewtopic.php?t=132674
+
 ### boot and ssh into pi
 
 `$ ssh pi@<pi ip address>`
