@@ -1,5 +1,11 @@
 #Config new Raspberry PI
 
+### run bash script
+
+```
+$ curl https://raw.githubusercontent.com/nkristoffersen/config.kristoffersen.io/master/raspberry.sh | bash
+```
+
 ### create raspbian-lite image on SD card
 
 https://www.raspberrypi.org/downloads/raspbian/
@@ -21,6 +27,11 @@ network={
   psk="YOUR_PASSWORD"
   key_mgmt=WPA-PSK
 }
+```
+
+### change gpu memory split. add this line to file `/boot/config.txt`
+```
+gpu_mem=16  
 ```
 
 ### allow for connecting things to the network port at the same time as wifi
