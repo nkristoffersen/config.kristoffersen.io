@@ -1,0 +1,11 @@
+syntax on
+set number
+set tabstop=4
+set softtabstop=4
+set expandtab
+set cursorline
+set lazyredraw
+set showmatch
+set laststatus=2
+set noshowmode
+colorscheme onedark
