@@ -1,12 +1,12 @@
 #!/bin/bash
-sudo apt-get update -y
-sudo apt-get upgrade -y
-sudo apt-get install wavemon -y
-sudo apt-get install screen -y
-sudo apt-get install vim -y
-sudo apt-get install git -y
-sudo apt-get install dnsutils -y
-sudo apt-get install htop -y
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get install -y wavemon
+sudo apt-get install -y screen
+sudo apt-get install -y vim
+sudo apt-get install -y git
+sudo apt-get install -y dnsutils
+sudo apt-get install -y htop
 mdkir .vim
 mkdir .vim/colors
 cd .vim/colors
