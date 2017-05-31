@@ -7,8 +7,15 @@ sudo apt-get install -y vim
 sudo apt-get install -y git
 sudo apt-get install -y dnsutils
 sudo apt-get install -y htop
+sudo apt-get install -y autossh
+sudo apt-get install -y wavemon
 sudo apt-get install -y dnsmasq
-mdkir .vim
+wget http://node-arm.herokuapp.com/node_latest_armhf.deb && sudo dpkg -i node_latest_armhf.deb
+sudo apt-get install -y libudev-dev
+sudo npm install forever -g
+sudo npm install forever-service -g
+sudo curl -o /usr/local/bin/rmate https://raw.githubusercontent.com/aurora/rmate/master/rmate
+sudo chmod +x /usr/local/bin/rmate
+mkdir .vim
 mkdir .vim/colors
-cd .vim/colors
-wget https://raw.githubusercontent.com/joshdick/onedark.vim/master/colors/onedark.vim
+wget https://raw.githubusercontent.com/joshdick/onedark.vim/master/colors/onedark.vim && mv onedark.vim .vim/colors/onedark.vim
