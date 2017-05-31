@@ -37,6 +37,24 @@ gpu_mem=16
 ### allow for connecting things to the network port at the same time as wifi
 (should rewrite this tutorial to work specifically for my usecase)
 https://www.raspberrypi.org/forums/viewtopic.php?t=132674
+```
+$ sudo vim /etc/network/interfaces
+```
+```
+#iface eth0 inet manual
+allow-hotplug eth0
+iface eth0 inet static  
+    address 192.168.1.1
+    netmask 255.255.255.0
+    network 192.168.1.0
+    broadcast 192.168.1.255
+```
+```
+$ sudo vim /etc/sysctl.conf
+```
+```
+net.ipv4.ip_forward=1 //uncomment this line
+```
 
 ### boot and ssh into pi
 

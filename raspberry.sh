@@ -7,6 +7,7 @@ sudo apt-get install -y vim
 sudo apt-get install -y git
 sudo apt-get install -y dnsutils
 sudo apt-get install -y htop
+sudo apt-get install -y dnsmasq
 mdkir .vim
 mkdir .vim/colors
 cd .vim/colors
