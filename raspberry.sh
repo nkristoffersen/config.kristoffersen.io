@@ -5,6 +5,7 @@ sudo apt-get install -y wavemon
 sudo apt-get install -y screen
 sudo apt-get install -y vim
 sudo apt-get install -y git
+sudo apt-get install -y iftop
 sudo apt-get install -y dnsutils
 sudo apt-get install -y htop
 sudo apt-get install -y autossh
