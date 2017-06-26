@@ -3,7 +3,7 @@
 ### run bash script
 
 ```
-$ curl https://raw.githubusercontent.com/nkristoffersen/config.kristoffersen.io/master/raspberry.sh | bash
+$ curl https://raw.githubusercontent.com/nkristoffersen/config.kristoffersen.io/master/raspberry-config.sh | bash
 ```
 
 ### create raspbian-lite image on SD card
