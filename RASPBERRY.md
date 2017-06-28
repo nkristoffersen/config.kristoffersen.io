@@ -194,4 +194,14 @@ $ sudo forever-service delete <service name>
 $ df -h // get disk usage in human readable format
 $ ab -n 200 -c 200 http://barleyboard.com/ // -n is total number of requests to perform and -c is number of requests to make at once
 $ screen // hit [ctr]+[a] then [c] to create a new screen. then hit [ctrl]+[a] twice to switch between screens.
+$ cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2 //get serial number of raspberry pi
+```
+### crontab for auto update
+```
+$ sudo su
+$ crontab -e
+```
+then add this to the crontab
+```
+45 * * * * wget -O - https://raw.githubusercontent.com/nkristoffersen/config.kristoffersen.io/master/raspberry-update.sh | bash 2>&1 | /usr/bin/logger -t raspberry-update
 ```
