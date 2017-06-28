@@ -12,7 +12,7 @@ sudo apt-get install -y htop
 sudo apt-get install -y autossh
 sudo apt-get install -y dnsmasq
 sudo apt-get install -y sendemail
-
+sudo apt-get remove -y nano
 sudo apt-get install -y unattended-upgrades
 sudo apt-get install -y apt-listchanges
 wget http://node-arm.herokuapp.com/node_latest_armhf.deb && sudo dpkg -i node_latest_armhf.deb
@@ -25,14 +25,8 @@ mkdir .vim
 mkdir .vim/colors
 wget https://raw.githubusercontent.com/joshdick/onedark.vim/master/colors/onedark.vim && mv onedark.vim .vim/colors/onedark.vim
 
-
-
-$ sendemail -l email.log
-    -f "sender@domain.com"
-    -u "Email Subject 1"
-    -t "receiver@domain.com"
-    -s "smtp.gmail.com:587"
-    -o tls=yes
-    -xu "youremail@gmail.com"
-    -xp "Email Password"
-    -o message-file="/tmp/mailbody.txt"
+sudo echo "Defaults env_keep += \"TIMESTAMP\"" >> /etc/sudoers
+sudo echo "Defaults env_keep += \"FROMEMAIL\"" >> /etc/sudoers
+sudo echo "Defaults env_keep += \"TOEMAIL\"" >> /etc/sudoers
+sudo echo "Defaults env_keep += \"EMAILPASSWORD\"" >> /etc/sudoers
+sudo echo "Defaults env_keep += \"PISERIAL\"" >> /etc/sudoers
