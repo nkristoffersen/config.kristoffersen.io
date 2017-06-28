@@ -25,6 +25,13 @@ mkdir .vim
 mkdir .vim/colors
 wget https://raw.githubusercontent.com/joshdick/onedark.vim/master/colors/onedark.vim && mv onedark.vim .vim/colors/onedark.vim
 
+sudo echo "FROMEMAIL=emailaddress@gmail.com" >> /etc/profile
+sudo echo "TOEMAIL=emailaddress@gmail.com" >> /etc/profile
+sudo echo "EMAILPASSWORD=emailpassword" >> /etc/profile
+
+sudo echo "TIMESTAMP=`date --iso-8601='seconds'`" >> /etc/profile
+sudo echo "PISERIAL=`cat /proc/cpuinfo | grep Serial | cut -d ' ' -f 2`" >> /etc/profile
+
 sudo echo "Defaults env_keep += \"TIMESTAMP\"" >> /etc/sudoers
 sudo echo "Defaults env_keep += \"FROMEMAIL\"" >> /etc/sudoers
 sudo echo "Defaults env_keep += \"TOEMAIL\"" >> /etc/sudoers
