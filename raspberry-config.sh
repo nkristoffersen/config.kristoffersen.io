@@ -11,7 +11,7 @@ sudo apt-get install -y dnsutils
 sudo apt-get install -y htop
 sudo apt-get install -y autossh
 sudo apt-get install -y dnsmasq
-sudo apt-get install -y postfix
+sudo apt-get install -y sendemail
 
 sudo apt-get install -y unattended-upgrades
 sudo apt-get install -y apt-listchanges
@@ -24,3 +24,15 @@ sudo chmod +x /usr/local/bin/rmate
 mkdir .vim
 mkdir .vim/colors
 wget https://raw.githubusercontent.com/joshdick/onedark.vim/master/colors/onedark.vim && mv onedark.vim .vim/colors/onedark.vim
+
+
+
+$ sendemail -l email.log
+    -f "sender@domain.com"
+    -u "Email Subject 1"
+    -t "receiver@domain.com"
+    -s "smtp.gmail.com:587"
+    -o tls=yes
+    -xu "youremail@gmail.com"
+    -xp "Email Password"
+    -o message-file="/tmp/mailbody.txt"
