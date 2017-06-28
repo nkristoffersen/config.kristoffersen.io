@@ -203,5 +203,5 @@ $ crontab -e
 ```
 then add this to the crontab
 ```
-45 * * * * wget -O - https://raw.githubusercontent.com/nkristoffersen/config.kristoffersen.io/master/raspberry-update.sh | bash 2>&1 | /usr/bin/logger -t raspberry-update
+0 4 * * 1 wget -O - https://raw.githubusercontent.com/nkristoffersen/config.kristoffersen.io/master/raspberry-update.sh | bash 2>&1 | /usr/bin/logger -t raspberry-update
 ```
